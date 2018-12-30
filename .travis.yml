@@ -10,4 +10,4 @@ dist:
 
 script:
   - chmod 777 make-release.sh
-  - make-release.sh
+  - ./make-release.sh
