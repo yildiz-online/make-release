@@ -1,0 +1,13 @@
+sudo: required
+
+language: generic
+
+git:
+  depth: false
+
+dist:
+  xenial
+
+script:
+  - chmod 777 make-release.sh
+  - make-release.sh
