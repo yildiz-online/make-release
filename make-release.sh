@@ -5,6 +5,7 @@ source release.txt
 echo "Preparing a new release..."
 
 git clone https://github.com/yildiz-online/$REPO
+cd $REPO
 mvn versions:set -DremoveSnapshot=true
 git commit pom.xml -m "[YE-0] Release"
 git checkout master
