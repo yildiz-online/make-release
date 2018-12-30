@@ -1,1 +1,1 @@
-REPO=none
+REPO=test-releases
