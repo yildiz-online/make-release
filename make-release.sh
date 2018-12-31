@@ -15,7 +15,7 @@ git remote add myrepo https://$GH_TOKEN@github.com/$REPO_OWNER_NAME/$REPO
 echo "----------------------------------------------------------------"
 echo "                   Set new release version.                     "
 echo "----------------------------------------------------------------"
-mvn versions:set -DremoveSnapshot=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+mvn versions:set -DremoveSnapshot=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 git commit pom.xml -m "[YE-0] Release"
 echo "----------------------------------------------------------------"
 echo "                   Checkout master branch.                      "
@@ -30,7 +30,7 @@ git checkout develop
 echo "----------------------------------------------------------------"
 echo "                Set new snapshot version.                       "
 echo "----------------------------------------------------------------"
-mvn versions:set -DnextSnapshot=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+mvn versions:set -DnextSnapshot=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 git commit pom.xml -m "[YE-0] Prepare next development version."
 git push --set-upstream myrepo develop 
 
