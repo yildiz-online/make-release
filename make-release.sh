@@ -2,19 +2,34 @@
 
 source release.txt
 
-echo "Preparing a new release..."
+echo "----------------------------------------------------------------"
+echo "                     Cloninig repository.                       "
+echo "----------------------------------------------------------------"
 
 git clone https://github.com/$REPO_OWNER_NAME/$REPO
-git config --global user.name "$REPO_OWNER_NAME"
-git config --global user.email "$REPO_OWNER_EMAIL"
 cd $REPO
+echo "----------------------------------------------------------------"
+echo "                        Adding remote.                          "
+echo "----------------------------------------------------------------"
 git remote add myrepo https://$GH_TOKEN@github.com/$REPO_OWNER_NAME/$REPO
+echo "----------------------------------------------------------------"
+echo "                   Set new release version.                     "
+echo "----------------------------------------------------------------"
 mvn versions:set -DremoveSnapshot=true
 git commit pom.xml -m "[YE-0] Release"
+echo "----------------------------------------------------------------"
+echo "                   Checkout master branch.                      "
+echo "----------------------------------------------------------------"
 git checkout master
 git merge -X theirs develop
 git push --set-upstream myrepo master 
+echo "----------------------------------------------------------------"
+echo "                  Checkout develop branch.                      "
+echo "----------------------------------------------------------------"
 git checkout develop
+echo "----------------------------------------------------------------"
+echo "                Set new snapshot version.                       "
+echo "----------------------------------------------------------------"
 mvn versions:set -DnextSnapshot=true
 git commit pom.xml -m "[YE-0] Prepare next development version."
 git push --set-upstream myrepo develop 
