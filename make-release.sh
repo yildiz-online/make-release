@@ -7,8 +7,8 @@ echo "Preparing a new release..."
 git clone https://github.com/$REPO_OWNER_NAME/$REPO
 git config --global user.name "$REPO_OWNER_NAME"
 git config --global user.email "$REPO_OWNER_EMAIL"
-git remote add myrepo https://$GH_TOKEN@github.com/$REPO_OWNER_NAME/$REPO
 cd $REPO
+git remote add myrepo https://$GH_TOKEN@github.com/$REPO_OWNER_NAME/$REPO
 mvn versions:set -DremoveSnapshot=true
 git commit pom.xml -m "[YE-0] Release"
 git checkout master
