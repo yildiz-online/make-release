@@ -13,10 +13,10 @@ mvn versions:set -DremoveSnapshot=true
 git commit pom.xml -m "[YE-0] Release"
 git checkout master
 git merge -X theirs develop
-git push --quiet --set-upstream myrepo master 
+git push --set-upstream myrepo master 
 git checkout develop
 mvn versions:set -DnextSnapshot=true
 git commit pom.xml -m "[YE-0] Prepare next development version."
-git push --quiet --set-upstream myrepo develop 
+git push --set-upstream myrepo develop 
 
 echo "Release complete."
