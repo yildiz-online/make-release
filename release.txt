@@ -1,4 +1,4 @@
-REPO=module-physics-bullet
-RELEASE_VERSION=2.0.7
-DEV_VERSION=2.0.8-SNAPSHOT
+REPO=parent-feature-server
+RELEASE_VERSION=1.0.3
+DEV_VERSION=1.0.4-SNAPSHOT
 
