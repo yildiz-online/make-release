@@ -5,8 +5,7 @@ source release.txt
 echo "----------------------------------------------------------------"
 echo "                     Cloninig repository.                       "
 echo "----------------------------------------------------------------"
-
-git clone https://github.com/$REPO_OWNER_NAME/$REPO
+git clone https://$GH_TOKEN@github.com/$REPO_OWNER_NAME/$REPO
 cd $REPO
 echo "----------------------------------------------------------------"
 echo "                        Adding remote.                          "
