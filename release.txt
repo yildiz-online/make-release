@@ -1,4 +1,4 @@
-REPO=none
+REPO=module-window
 RELEASE_VERSION=3.0.0
 DEV_VERSION=3.0.1-SNAPSHOT
 
