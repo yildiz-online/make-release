@@ -1,4 +1,4 @@
-REPO=component-native-physfs
+REPO=component-native-physicsfs
 RELEASE_VERSION=3.0.2.0
 DEV_VERSION=3.0.2.1-SNAPSHOT
 
