@@ -1,5 +1,5 @@
-REPO=parent-component-native
-RELEASE_VERSION=2.2.7
-DEV_VERSION=2.2.8-SNAPSHOT
+REPO=component-native-physfs
+RELEASE_VERSION=3.0.2.0
+DEV_VERSION=3.0.2.1-SNAPSHOT
 
 
